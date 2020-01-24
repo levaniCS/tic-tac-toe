@@ -46,7 +46,7 @@ class StartGameScreen extends Component {
         <br />
         <br />
         <p style={{ color: 'red' }}>
-          Num of Win boxes should be between 2 to 4
+          Num of Win boxes should be 2 or 3
         </p>
         <label>Num of Win: </label>
         <input
