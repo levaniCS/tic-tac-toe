@@ -1,16 +1,8 @@
-import React, { Component } from 'react';
-import './App.css';
-import StartGameScreen from './screens/StartGameScreen';
+import React from 'react';
+import Game from './components/Game';
 
-class App extends Component {
-  render() {
-    return (
-      <div className='container'>
-        <h1>Tic Tac Toe App</h1>
-        <StartGameScreen />
-      </div>
-    );
-  }
-}
+const App = () => {
+  return <Game />;
+};
 
 export default App;

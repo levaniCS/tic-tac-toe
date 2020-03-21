@@ -1,13 +1,111 @@
-body {
+*,
+*::after,
+*::before {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: inherit;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+@media screen and (max-width: 31.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media screen and (max-width: 25em) {
+  html {
+    font-size: 37.5%;
+  }
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1a2228;
+}
+
+.board-row:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+.status {
+  color: #59656d;
+}
+
+.square {
+  cursor: pointer;
+  background: #595a5c;
+  border: 0.4rem solid #1a2228;
+  font-size: 10rem;
+  font-weight: bold;
+  line-height: 14rem;
+  float: left;
+  height: 14rem;
+  width: 14rem;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.game {
+  display: grid;
+  gap: 5rem;
+}
+
+.game-board {
+  box-shadow: 0.2rem 0.5rem 1rem rgba(0, 0, 0, 0.4);
+}
+
+.game-info {
+  font-size: 5rem;
+  color: #59656d;
+  text-align: center;
+}
+
+.restart-button {
+  text-align: center;
+}
+
+.restart {
+  cursor: pointer;
+  transition-duration: 0.4s;
+  background-color: #424242;
+  color: #fffde7;
+  border: none;
+  font-size: 2.5rem;
+  line-height: 5rem;
+  height: 5rem;
+  width: 50%;
+  text-align: center;
+  border-radius: 0.5rem;
+}
+
+.restart:hover {
+  background-color: #595a5c;
+  transform: scale(1.05) translateY(2px);
+  box-shadow: 0 1rem 1.5rem 0.2rem rgba(0, 0, 0, 0.24);
+}
+
+.restart:focus {
+  outline: none;
+}
+
+.restart:active {
+  box-shadow: 0 1rem 1.2rem 0.4rem rgba(0, 0, 0, 0.5);
 }
